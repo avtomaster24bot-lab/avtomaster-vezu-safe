@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+{{HEAD}}
+<title>Разместиться на АвтоМастер24 — бесплатно, по вашему согласию</title>
+<meta name="description" content="Разместите карточку СТО, эвакуатора, мойки, магазина запчастей, выездного мастера или перевозчика. Клиенты пишут вам напрямую в WhatsApp.">
+</head>
+<body>
+{{HEADER}}
+<main id="view" class="narrow" tabindex="-1">
+  <h1>Разместиться в каталоге</h1>
+  <p class="muted">Клиенты увидят вашу карточку и напишут вам напрямую в WhatsApp. Без регистрации, паролей и комиссий. Базовое размещение — бесплатно.</p>
+
+  <div class="hint small"><span class="ic">ℹ️</span><div>
+    <b>Как это устроено и что будет с вашими данными</b>
+    <ol class="tight">
+      <li>Заполните карточку. Пока вы не нажали «Отправить», данные никуда не уходят — всё считается в вашем браузере.</li>
+      <li>«Отправить» откроет WhatsApp с готовым сообщением на номер площадки. <b>Отправьте его с того же номера WhatsApp, который указали в карточке</b> — так мы понимаем, что номер ваш. Фото (необязательно) пришлите следом.</li>
+      <li>Мы публикуем карточку в течение рабочего дня. Публикуются <b>только</b> поля карточки, по вашему согласию. ФИО для согласия на сайте не публикуется.</li>
+      <li>Удалить или изменить карточку — одно сообщение с того же номера (раздел <a href="#remove">ниже</a>). Удаляем в течение 1 рабочего дня.</li>
+    </ol></div></div>
+
+  <form id="f" class="card" novalidate autocomplete="off">
+    <h2>1. Карточка</h2>
+    <label for="kind">Кто вы</label><select id="kind" name="kind" required></select>
+    <label for="name">Название или имя для карточки</label><input id="name" name="name" maxlength="60" required placeholder="СТО «Мотор», Эвакуатор Ержан, Газель 24">
+    <label for="city">Город</label><select id="city" name="city" required></select>
+    <label for="services">Услуги (через запятую или с новой строки, до 12)</label><textarea id="services" name="services" rows="3" maxlength="600" placeholder="Диагностика, ходовая, замена масла"></textarea>
+    <label for="whatsapp">Рабочий номер WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" required placeholder="+7 7XX XXX XX XX">
+    <label class="check"><input type="checkbox" name="call" checked> Показывать кнопку «Позвонить» на этот номер</label>
+    <label for="area">Адрес или район работы (необязательно)</label><input id="area" name="area" maxlength="100" placeholder="ул. Жансугурова 1 / по городу и области">
+    <label for="hours">Часы работы (необязательно)</label><input id="hours" name="hours" maxlength="60" placeholder="Пн–Сб 9:00–19:00, круглосуточно">
+    <label for="about">Коротко о себе (необязательно, до 240 знаков)</label><textarea id="about" name="about" rows="2" maxlength="240" placeholder="Работаем с 2010 года, гарантия на работы"></textarea>
+    <p class="small muted">Не указывайте ИИН, номера документов, домашний адрес и данные клиентов. Совет: используйте рабочий номер (WhatsApp Business), а не личный.</p>
+
+    <h2>2. Предпросмотр</h2>
+    <div id="preview"></div>
+
+    <h2>3. Размещение в каталоге</h2>
+    <label>Тариф</label>
+    <div class="opts" id="plan">
+      <label class="opt"><input type="radio" name="plan" value="free" checked><span>Базовый — 0 ₸</span></label>
+      <label class="opt"><input type="radio" name="plan" value="top"><span>⭐ Топ</span></label>
+      <label class="opt"><input type="radio" name="plan" value="verified"><span>✔ Проверен</span></label>
+    </div>
+    <p class="small muted">Цены и условия — на странице <a href="pricing.html">Тарифы</a>. Платные опции подключаются после счёта, сайт оплату не принимает.</p>
+    <label for="fio">Ваши ФИО — только для согласия (на сайте не публикуются)</label><input id="fio" name="fio" maxlength="80" required placeholder="Фамилия Имя Отчество">
+    <label class="check"><input type="checkbox" name="c_consent" required> <span>Даю согласие на сбор, обработку и <b>публикацию в общедоступном каталоге</b> данных моей карточки, включая трансграничную передачу (хостинг сайта за пределами РК), на условиях <a href="consent.html" target="_blank">текста согласия</a> на срок <span data-cfg="LISTING_MONTHS"></span> мес. или до отзыва.</span></label>
+    <label class="check"><input type="checkbox" name="c_owner" required> <span>Номер WhatsApp принадлежит мне или моему бизнесу, и я вправе его публиковать. Данные других людей в карточке нет.</span></label>
+    <label class="check"><input type="checkbox" name="c_terms" required> <span>Принимаю <a href="terms.html" target="_blank">пользовательское соглашение</a> и <a href="privacy.html" target="_blank">политику конфиденциальности</a>.</span></label>
+    <div id="err" class="notice warn small" hidden></div>
+    <button class="p block" id="send" type="button">💬 Отправить на размещение в WhatsApp</button>
+    <p class="small muted">Откроется WhatsApp с готовым текстом. Вы увидите его целиком и отправите сами.</p>
+
+    <h2>Или: личная визитка-ссылка без каталога</h2>
+    <p class="small muted">Мгновенно и без отправки нам: ссылка и QR-код, где все данные зашиты в саму ссылку. Сайт их не хранит. Подходит для наклейки на машину, визиток, статуса в WhatsApp. В каталоге такая визитка не появится.</p>
+    <button class="block" id="mk" type="button">🔗 Сделать визитку-ссылку и QR</button>
+    <div id="out"></div>
+  </form>
+
+  <section id="remove" class="card">
+    <h2>Изменить или удалить карточку</h2>
+    <p class="small">Напишите <b>с номера WhatsApp, который указан в карточке</b>. Документы не нужны. Удаляем с сайта в течение 1 рабочего дня и сообщаем в ответ. Копии сайта в поисковиках обновятся сами — обычно за несколько дней.</p>
+    <label for="rid">Ссылка на карточку или её название</label><input id="rid" maxlength="200" placeholder="https://…/card.html?id=… или СТО «Мотор»">
+    <div class="row" style="margin-top:12px">
+      <button class="danger" id="del" type="button">🗑 Удалить карточку и отозвать согласие</button>
+      <button id="edit" type="button">✏️ Изменить данные</button>
+    </div>
+  </section>
+</main>
+{{FOOTER}}
+<script type="module" src="js/join.js?v=1"></script>
+<noscript><p class="card">Для формы включите JavaScript — или просто напишите нам в WhatsApp: <span data-admin-phone></span>.</p></noscript>
+</body>
+</html>

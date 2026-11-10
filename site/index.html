@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0A0D14">
+<link rel="icon" href="assets/app-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/app-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css?v=1"><link rel="stylesheet" href="css/safe.css?v=1">
+<title>АвтоМастер24 — СТО, эвакуатор, мойка, запчасти, грузоперевозки. Пишите мастерам напрямую в WhatsApp</title>
+<meta name="description" content="Каталог автосервисов, эвакуаторов, моек, магазинов запчастей, выездных мастеров и грузоперевозчиков Казахстана. Без регистрации: выберите исполнителя и напишите ему в WhatsApp.">
+<link rel="canonical" href="https://avtomaster24bot-lab.github.io/avtomaster-vezu-safe/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="АвтоМастер24"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="АвтоМастер24 — мастера вашего города, связь напрямую в WhatsApp">
+<meta property="og:description" content="СТО, эвакуатор, мойка, запчасти, выездная помощь, грузоперевозки. Без регистрации и без передачи ваших данных сайту.">
+<meta property="og:image" content="https://avtomaster24bot-lab.github.io/avtomaster-vezu-safe/assets/og.jpg">
+</head>
+<body>
+<a class="skip" href="#view">К содержимому</a>
+<header class="top">
+  <a href="./" class="logo" aria-label="АвтоМастер24 — на главную"><img src="assets/favicon.svg" alt=""><span>АВТОМАСТЕР<b>24</b></span></a>
+  <button id="themeBtn" class="iconbtn" type="button" aria-label="Сменить тему">☀️</button>
+  <a href="join.html" class="chip">＋ Разместиться</a>
+</header>
+<main id="view" tabindex="-1">
+  <section class="hero" style="background-image:url(assets/img/hero.webp)">
+    <div class="hero-in">
+      <span class="eyebrow">Без регистрации · без форм · без слежки</span>
+      <h1>Мастера вашего города — пишите им напрямую в WhatsApp</h1>
+      <p>СТО, эвакуатор, мойка, запчасти, выездная помощь и грузоперевозки. Выберите исполнителя и нажмите «Написать в WhatsApp» — сообщение уйдёт прямо ему, сайт его не видит и ничего о вас не сохраняет.</p>
+      <div class="row"><a class="btn p" href="#catalog">Найти исполнителя</a><a class="btn" href="join.html">Я исполнитель — разместиться</a></div>
+    </div>
+  </section>
+
+  <section id="catalog" aria-label="Каталог исполнителей">
+    <div class="filters safe-filters">
+      <select id="city" aria-label="Город"></select>
+      <input id="q" type="search" placeholder="Что нужно? Например: ходовая, эвакуатор, газель" aria-label="Поиск по услугам и названию" autocomplete="off">
+    </div>
+    <div class="fchips" id="kinds" role="tablist" aria-label="Категория"></div>
+    <div id="list" aria-live="polite"><div class="sk-wrap" aria-busy="true"><div class="sk sk-c"></div><div class="sk sk-c"></div></div></div>
+  </section>
+
+  <section class="card how">
+    <h2>Как это работает</h2>
+    <div class="steps3">
+      <div><b>1</b>Выберите город и что нужно</div>
+      <div><b>2</b>Нажмите «Написать в WhatsApp» у подходящего исполнителя</div>
+      <div><b>3</b>Договаривайтесь напрямую: цена, время, адрес — в вашей переписке</div>
+    </div>
+    <p class="small muted">Сайт — только справочник. Исполнители сами разместили свои карточки и сами отвечают за услуги и цены. <a href="terms.html">Подробнее</a></p>
+  </section>
+
+  <section class="card onboard">
+    <h2>Вы мастер, СТО, эвакуатор или перевозчик?</h2>
+    <p>Разместите карточку бесплатно: название, город, услуги и номер WhatsApp. Клиенты пишут вам напрямую — без посредников и комиссий. Удалить карточку можно в любой момент одним сообщением.</p>
+    <div class="row"><a class="btn p" href="join.html">Разместиться бесплатно</a><a class="btn" href="pricing.html">Тарифы: Топ и «Проверен»</a></div>
+  </section>
+</main>
+<footer class="foot small muted">
+  <p class="privacy-line">🔒 Сайт не собирает данные клиентов: без регистрации, форм, cookies и аналитики.</p>
+  © АвтоМастер24 · <a href="pricing.html">Тарифы</a> · <a href="join.html">Разместиться</a> · <a href="join.html#remove">Изменить или удалить карточку</a><br>
+  <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Пользовательское соглашение</a> · <a href="consent.html">Согласие исполнителя</a> · <a data-admin-wa="Здравствуйте! Интересует франшиза АвтоМастер24 в моём городе." href="#">Франшиза в вашем городе</a>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="js/catalog.js?v=1"></script>
+<noscript><p class="card">Для поиска по каталогу включите JavaScript.</p></noscript>
+</body>
+</html>

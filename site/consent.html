@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0A0D14">
+<link rel="icon" href="assets/app-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/app-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css?v=1"><link rel="stylesheet" href="css/safe.css?v=1">
+<title>Согласие исполнителя на публикацию данных — АвтоМастер24</title>
+<meta name="description" content="Текст согласия исполнителя на сбор, обработку и публикацию данных карточки в каталоге АвтоМастер24.">
+</head>
+<body>
+<header class="top">
+  <a href="./" class="logo" aria-label="АвтоМастер24 — на главную"><img src="assets/favicon.svg" alt=""><span>АВТОМАСТЕР<b>24</b></span></a>
+  <button id="themeBtn" class="iconbtn" type="button" aria-label="Сменить тему">☀️</button>
+  <a href="join.html" class="chip">＋ Разместиться</a>
+</header>
+<main id="view" class="narrow doc" tabindex="-1">
+  <h1>Согласие на сбор, обработку и публикацию персональных данных</h1>
+  <p class="muted small">Версия <span data-cfg="CONSENT_VERSION"></span>. Состав согласия — по ст. 8 п. 4 Закона РК «О персональных данных и их защите».</p>
+  <p>Отправляя со своего номера WhatsApp заявку на размещение (её текст формирует страница «<a href="join.html">Разместиться</a>»), я, субъект персональных данных, ФИО которого указано в заявке, даю согласие оператору на следующих условиях.</p>
+  <ol>
+    <li><b>Оператор:</b> <span data-op="name"></span>, БИН/ИИН <span data-op="bin"></span>.</li>
+    <li><b>Субъект:</b> лицо, ФИО которого указано в заявке, отправленной с номера WhatsApp из карточки.</li>
+    <li><b>Срок:</b> <span data-cfg="LISTING_MONTHS"></span> месяцев с даты публикации карточки (с возможностью продления по моему сообщению) или до отзыва согласия.</li>
+    <li><b>Передача третьим лицам:</b> оператор не передаёт данные третьим лицам, кроме публикации карточки в каталоге (п. 6) и технических сервисов, без которых каталог не работает (хостинг сайта и WhatsApp). Опубликованные сведения могут повторно использоваться третьими лицами со ссылкой на источник (ст. 7 п. 5 Закона).</li>
+    <li><b>Трансграничная передача:</b> есть. Сайт размещён на GitHub Pages (GitHub, Inc., США), а заявка передаётся через WhatsApp (Meta Platforms). Основной экземпляр реестра и подтверждение согласия хранятся у оператора на территории РК.</li>
+    <li><b>Распространение в общедоступных источниках:</b> да. Поля карточки публикуются в открытом каталоге сайта и на странице-визитке. Их может видеть любой посетитель и могут индексировать поисковые системы.</li>
+    <li><b>Перечень данных:</b>
+      <ul><li>публикуются: название или имя для карточки, категория, город, услуги, рабочий номер WhatsApp (и телефон, если включена кнопка «Позвонить»), адрес или район работы, часы работы, описание, фото (если я его прислал);</li>
+      <li>не публикуются: ФИО и текст заявки — только как подтверждение согласия.</li></ul></li>
+    <li><b>Иное:</b> цель — справочный каталог, чтобы клиенты могли сами связаться со мной. Я могу в любой момент изменить карточку или отозвать согласие сообщением с того же номера. Тогда карточку удалят с сайта в течение 1 рабочего дня. Подтверждаю, что номер принадлежит мне или моему бизнесу, а в карточке нет чужих персональных данных.</li>
+  </ol>
+  <p><a class="btn p" href="join.html">Разместиться</a> <a class="btn" href="privacy.html">Политика конфиденциальности</a></p>
+</main>
+<footer class="foot small muted">
+  <p class="privacy-line">🔒 Сайт не собирает данные клиентов: без регистрации, форм, cookies и аналитики.</p>
+  © АвтоМастер24 · <a href="pricing.html">Тарифы</a> · <a href="join.html">Разместиться</a> · <a href="join.html#remove">Изменить или удалить карточку</a><br>
+  <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Пользовательское соглашение</a> · <a href="consent.html">Согласие исполнителя</a> · <a data-admin-wa="Здравствуйте! Интересует франшиза АвтоМастер24 в моём городе." href="#">Франшиза в вашем городе</a>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="js/page.js?v=1"></script>
+</body>
+</html>

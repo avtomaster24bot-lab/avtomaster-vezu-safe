@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+{{HEAD}}
+<title>АвтоМастер24 — СТО, эвакуатор, мойка, запчасти, грузоперевозки. Пишите мастерам напрямую в WhatsApp</title>
+<meta name="description" content="Каталог автосервисов, эвакуаторов, моек, магазинов запчастей, выездных мастеров и грузоперевозчиков Казахстана. Без регистрации: выберите исполнителя и напишите ему в WhatsApp.">
+<link rel="canonical" href="https://avtomaster24bot-lab.github.io/avtomaster-vezu-safe/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="АвтоМастер24"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="АвтоМастер24 — мастера вашего города, связь напрямую в WhatsApp">
+<meta property="og:description" content="СТО, эвакуатор, мойка, запчасти, выездная помощь, грузоперевозки. Без регистрации и без передачи ваших данных сайту.">
+<meta property="og:image" content="https://avtomaster24bot-lab.github.io/avtomaster-vezu-safe/assets/og.jpg">
+</head>
+<body>
+<a class="skip" href="#view">К содержимому</a>
+{{HEADER}}
+<main id="view" tabindex="-1">
+  <section class="hero" style="background-image:url(assets/img/hero.webp)">
+    <div class="hero-in">
+      <span class="eyebrow">Без регистрации · без форм · без слежки</span>
+      <h1>Мастера вашего города — пишите им напрямую в WhatsApp</h1>
+      <p>СТО, эвакуатор, мойка, запчасти, выездная помощь и грузоперевозки. Выберите исполнителя и нажмите «Написать в WhatsApp» — сообщение уйдёт прямо ему, сайт его не видит и ничего о вас не сохраняет.</p>
+      <div class="row"><a class="btn p" href="#catalog">Найти исполнителя</a><a class="btn" href="join.html">Я исполнитель — разместиться</a></div>
+    </div>
+  </section>
+
+  <section id="catalog" aria-label="Каталог исполнителей">
+    <div class="filters safe-filters">
+      <select id="city" aria-label="Город"></select>
+      <input id="q" type="search" placeholder="Что нужно? Например: ходовая, эвакуатор, газель" aria-label="Поиск по услугам и названию" autocomplete="off">
+    </div>
+    <div class="fchips" id="kinds" role="tablist" aria-label="Категория"></div>
+    <div id="list" aria-live="polite"><div class="sk-wrap" aria-busy="true"><div class="sk sk-c"></div><div class="sk sk-c"></div></div></div>
+  </section>
+
+  <section class="card how">
+    <h2>Как это работает</h2>
+    <div class="steps3">
+      <div><b>1</b>Выберите город и что нужно</div>
+      <div><b>2</b>Нажмите «Написать в WhatsApp» у подходящего исполнителя</div>
+      <div><b>3</b>Договаривайтесь напрямую: цена, время, адрес — в вашей переписке</div>
+    </div>
+    <p class="small muted">Сайт — только справочник. Исполнители сами разместили свои карточки и сами отвечают за услуги и цены. <a href="terms.html">Подробнее</a></p>
+  </section>
+
+  <section class="card onboard">
+    <h2>Вы мастер, СТО, эвакуатор или перевозчик?</h2>
+    <p>Разместите карточку бесплатно: название, город, услуги и номер WhatsApp. Клиенты пишут вам напрямую — без посредников и комиссий. Удалить карточку можно в любой момент одним сообщением.</p>
+    <div class="row"><a class="btn p" href="join.html">Разместиться бесплатно</a><a class="btn" href="pricing.html">Тарифы: Топ и «Проверен»</a></div>
+  </section>
+</main>
+{{FOOTER}}
+<script type="module" src="js/catalog.js?v=1"></script>
+<noscript><p class="card">Для поиска по каталогу включите JavaScript.</p></noscript>
+</body>
+</html>

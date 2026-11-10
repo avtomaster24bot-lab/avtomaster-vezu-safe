@@ -1,0 +1,16 @@
+{
+  "name": "АвтоМастер24 — мастера рядом, связь в WhatsApp",
+  "short_name": "АвтоМастер24",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0A0D14",
+  "theme_color": "#0A0D14",
+  "lang": "ru",
+  "icons": [
+    {"src": "assets/app-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/app-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "assets/app-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
